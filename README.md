@@ -4,7 +4,7 @@ This is a simple web server that one can use to detect, connect, enable Xsens DO
 
 It uses Node.js in combination with Noble (https://github.com/abandonware/noble).
 
-To install the software, use "npm install".
+To install the software, clone it or download it to a folder and use "npm install" in that folder.
 
 Please configure your OS as described on the Noble page ((https://github.com/abandonware/noble).
 
