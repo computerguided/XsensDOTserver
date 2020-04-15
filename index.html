@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+        <title>Xsens DOT with Node.js</title>
+        <link rel="stylesheet" type="text/css" href="styleSheet.css" media="all">
+        <script src="socket.io/socket.io.js"></script>
+        <script src="communication.js"></script>
+
+        <style>th:not(:last-child), td:not(:last-child) { border-right: 2px solid #000; }</style>
+
+        <script>
+
+        </script>
+
+	</head>
+
+    <body>
+
+        <img src="Xsens_DOT_Logo.png" width="500px">
+        <hr>
+        <table>
+            <tr>
+                <th><button id="scanControlButton" class="actionButton" onclick="scanControlButtonClicked()">Start scanning</button></th>
+                <th><button id="connectionControlButton"  class="actionButton" onclick="connectionControlButtonClicked()">Connect sensors</button></th> 
+                <th><button id="measurementControlButton" class="actionButton" onclick="measurementControlButtonClicked()">Enable sensors</button></th>
+            </tr>
+            <tr valign="top" align="center">
+                <td><p id="DiscoveredSensors" style="font-size:14px"><p></td>
+                <td><p id="ConnectedSensors"  style="font-size:14px"><p></td>
+                <td><p id="MeasuringSensors"  style="font-size:14px"><p></td>
+            <tr>
+          </table>
+        <hr>
+
+        <button id='recordingControlButton' disabled class="actionButton" onClick="recordingControlButtonClick()">Start recording</button>
+        <hr>
+ 		
+ 		Recordings:<br>
+
+ 		<p id="recordings" style="font-size:12px"><p>
+
+		<button id="deleteFilesButton" class="actionButton" onClick="deleteFilesButtonClick()">Delete</button>
+
+	</body>
+</html>
