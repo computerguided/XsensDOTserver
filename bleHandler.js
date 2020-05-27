@@ -118,6 +118,7 @@ class BleHandler
             {
                 if( error )
                 {
+                    bleHandler.disconnectSensor( sensor );
                     bleHandler.sendBleEvent( 'bleSensorError', { sensor:sensor, error: error } );
                     return;
                 }
@@ -165,7 +166,7 @@ class BleHandler
         var buffer = new Buffer(3);
         buffer[0] = 0x01;
         buffer[1] = SENSOR_ENABLE;
-        buffer[2] = 0x02;
+        buffer[2] = 0x05;
 
 
         if( measurementCharacteristic.listenerCount('data') == 0 )
@@ -215,7 +216,7 @@ class BleHandler
         var buffer = new Buffer(3);
         buffer[0] = 0x01;
         buffer[1] = SENSOR_DISABLE;
-        buffer[2] = 0x02;
+        buffer[2] = 0x05;
 
         controlCharacteristic.write( buffer, false, function(error)
         {
